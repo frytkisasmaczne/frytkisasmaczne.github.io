@@ -6,6 +6,11 @@
     <span id=clock style="font-family:CozetteVector;font-size:18px;"></span>
     <script>
       var span = document.getElementById('clock');
+      var urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.has('fs') && urlParams.get('fs')!=""){
+         span.style.fontSize = urlParams.get('fs');
+      }
+     
       function upd_time() {
       var d = new Date();
       var s = d.getSeconds();
@@ -14,6 +19,7 @@
       span.textContent = 
         ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
       }
+      
       setInterval(upd_time, 1000);
     </script>
   </body>
