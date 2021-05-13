@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>teh clock</title>
+  </head>
+  <body>
+    <span id=clock></span>
+    <script>
+      var span = document.getElementById('clock');
+      function upd_time() {
+      var d = new Date();
+      var s = d.getSeconds();
+      var m = d.getMinutes();
+      var h = d.getHours();
+      span.textContent = 
+        ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2);
+      }
+      setInterval(upd_time, 1000);
+    </script>
+  </body>
+</html>
