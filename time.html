@@ -1,9 +1,12 @@
 <html>
   <head>
     <title>teh clock</title>
+    <style>
+      @font-face { font-family: CozetteV; src: url('https://github.com/slavfox/Cozette/releases/download/v.1.9.3/CozetteVector.otf'); }
+    </style>
   </head>
   <body>
-    <span id=clock style="font-family:CozetteVector;font-size:18px;"></span>
+    <span id=clock style="font-family:CozetteV;font-size:18px;"></span>
     <script>
       var span = document.getElementById('clock');
       var urlParams = new URLSearchParams(window.location.search);
